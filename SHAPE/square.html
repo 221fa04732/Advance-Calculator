@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="shape.css">
+</head>
+<body>
+    <div class="box">
+        <div class="header">
+            <p>SQUARE</p>
+        </div>
+        <div class="input_output">
+            <div class="input">
+                <p>Enter side of square</p>
+                <input type="text" id="first_number" >
+            </div>
+            <div class="output">
+                <div class="reasult">
+                    <p>REASULT</p>
+                </div>
+                <div class="answer">
+                    <h1 id="ans"></h1>
+                </div>
+            </div>
+        </div>
+        <div class="button">
+            <button onclick="area()" >AREA</button>
+            <button onclick="per()">PERIMETER</button>
+            <button onclick="dig()">DIAGONAL</button>
+        </div>
+    </div>
+
+    <script>
+        function area()
+        {
+            var add_var1=document.getElementById("first_number").value;
+            var result=parseFloat(add_var1)*parseFloat(add_var1);
+            document.getElementById("ans").innerHTML=result;
+        }
+
+        function per()
+        {
+            var add_var1=document.getElementById("first_number").value;
+            var result=parseFloat(add_var1)*4;
+            document.getElementById("ans").innerHTML=result;
+        }
+
+        function dig()
+        {
+            var add_var1=document.getElementById("first_number").value;
+            var result=(parseFloat(add_var1)*parseFloat(add_var1))+(parseFloat(add_var1)*parseFloat(add_var1));
+            document.getElementById("ans").innerHTML=Math.sqrt(result);
+        }
+    </script>
+
+</body>
+</html>

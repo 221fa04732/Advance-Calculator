@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body
+        {
+            background-color: rgb(237, 212, 212);
+        }
+
+        .main_box
+        {
+            border: 2px solid rgb(186, 0, 0);
+            margin: 5vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+            border-radius: 10px;
+           
+        }
+
+        .box1
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 90vw;
+            height: 10vh;
+            border: 2px solid rgb(186, 0, 0);
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            background-color: rgb(186, 0, 0);
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .box
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: .5rem;
+            padding-bottom: 1rem;
+            
+        }
+
+        button
+        {
+            width: 85vw;
+            height: 10vh;
+            background-color: rgb(255, 148, 148);
+            border: 2px solid rgb(186, 0, 0);
+            border-radius: 10px;
+            font-size: 1.2rem;
+            font-weight: bold;
+    
+        }
+
+        button:hover
+        {
+            background-color: rgb(186, 0, 0);
+            
+            transform: scaleY(1.2);
+            transform: scaleX(1.02);
+            box-shadow: 0px 0px 10px 10px rgb(244, 244, 150);
+        }
+    </style>
+</head>
+<body>
+    <div class="main_box">
+        <div class="box1">
+            <p>Shape Measurement</p>
+        </div>
+        <div class="box">
+            <a href="rectangle.html"><button>RECTANGLE</button></a>
+            <a href="square.html"><button>SQUARE</button></a>
+            <a href="triangle.html"><button>TRIANGLE</button></a>
+            <a href="circle.html"><button>CIRCLE</button></a>
+            <a href="cube.html"><button>CUBE</button></a>
+            <a href="cuboid.html"><button>CUBOID</button></a>
+            <a href="cylinder.html"><button>CYLINDER</button></a>
+            <a href="cone.html"><button>CONE</button></a>
+            <a href="sphere.html"><button>SPHERE</button></a>
+        </div>
+    </div>
+    
+</body>
+</html>

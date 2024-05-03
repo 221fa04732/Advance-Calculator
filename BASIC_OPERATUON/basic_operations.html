@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="box">
+        <div class="header">
+            <p>BASIC OPERATION</p>
+        </div>
+        <div class="input_output">
+            <div class="input">
+                <p>Enter first number</p>
+                <input type="text" id="first_number" >
+                <p>Enter second number</p>
+                <input type="text" id="second_number" >
+            </div>
+            <div class="output">
+                <div class="reasult">
+                    <p>REASULT</p>
+                </div>
+                <div class="answer">
+                    <h1 id="ans"></h1>
+                </div>
+            </div>
+        </div>
+        <div class="button">
+            <button onclick="ADDATION()" >ADDATION</button>
+            <button onclick="SUBSTRACTION()">SUBSTRACTION</button>
+            <button onclick="MULTIPLICATION()">MULTIPLICATION</button>
+            <button onclick="DIVISION()">DIVISION</button>
+            <button onclick="REMAINDER()">REMAINDER</button>
+        </div>
+    </div>
+
+    <script>
+        function ADDATION()
+        {
+            var add_var1=document.getElementById("first_number").value;
+            var add_var2=document.getElementById("second_number").value;
+            var result=parseFloat(add_var1)+parseFloat(add_var2);
+            document.getElementById("ans").innerHTML=result;
+        }
+
+        function SUBSTRACTION()
+        {
+            var add_var1=document.getElementById("first_number").value;
+            var add_var2=document.getElementById("second_number").value;
+            var result=parseFloat(add_var1)-parseFloat(add_var2);
+            document.getElementById("ans").innerHTML=result;
+        }
+
+        function MULTIPLICATION()
+        {
+            var add_var1=document.getElementById("first_number").value;
+            var add_var2=document.getElementById("second_number").value;
+            var result=parseFloat(add_var1)*parseFloat(add_var2);
+            document.getElementById("ans").innerHTML=result;
+        }
+
+        function DIVISION()
+        {
+            var add_var1=document.getElementById("first_number").value;
+            var add_var2=document.getElementById("second_number").value;
+            if(add_var2==0)
+            {
+                alert("DIVISION NOT POSSIBLE\n\nZERO DIVISION ERROR");
+            }
+            else
+            {
+                var result=parseFloat(add_var1)/parseFloat(add_var2);
+                document.getElementById("ans").innerHTML=result;
+            }
+        }
+
+        function REMAINDER()
+        {
+            var add_var1=document.getElementById("first_number").value;
+            var add_var2=document.getElementById("second_number").value;
+            if(add_var2==0)
+            {
+                alert("DIVISION NOT POSSIBLE\n\nZERO DIVISION ERROR");
+            }
+            else
+            {
+                var result=parseFloat(add_var1)%parseFloat(add_var2);
+                document.getElementById("ans").innerHTML=result;
+            }
+        }
+    </script>
+
+</body>
+</html>

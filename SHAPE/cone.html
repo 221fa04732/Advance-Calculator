@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="shape.css">
+</head>
+<body>
+    <div class="box">
+        <div class="header">
+            <p>CONE</p>
+        </div>
+        <div class="input_output">
+            <div class="input">
+                <p>Enter radius of cone</p>
+                <input type="text" id="first_number" >
+                <p>Enter height of cone</p>
+                <input type="text" id="second_number" >
+            </div>
+            <div class="output">
+                <div class="reasult">
+                    <p>REASULT</p>
+                </div>
+                <div class="answer">
+                    <h1 id="ans"></h1>
+                </div>
+            </div>
+        </div>
+        <div class="button">
+            <button onclick="vol()" >VOLUME</button>
+            <button onclick="tsa()">SURFACE AREA</button>
+            <button onclick="dig()">SLANT HEIGHT</button>
+        </div>
+    </div>
+
+    <script>
+        function vol()
+        {
+            var add_var1=document.getElementById("first_number").value;
+            var add_var2=document.getElementById("second_number").value;
+            var result=(Math.PI*add_var1*add_var1*add_var2)*1/3;
+            document.getElementById("ans").innerHTML=result;
+        }
+
+        function tsa()
+        {
+            var add_var1=document.getElementById("first_number").value;
+            var add_var2=document.getElementById("second_number").value;
+            var sh=Math.sqrt((add_var1*add_var1)+(add_var1*add_var1));
+            var result=Math.PI*add_var1*(sh+add_var1);
+            document.getElementById("ans").innerHTML=result;
+        }
+
+        function dig()
+        {
+            var add_var1=document.getElementById("first_number").value;
+            var add_var2=document.getElementById("second_number").value;
+            var result=(add_var1*add_var1)+(add_var1*add_var1);
+            document.getElementById("ans").innerHTML=Math.sqrt(result);
+        }
+    
+    </script>
+
+</body>
+</html>

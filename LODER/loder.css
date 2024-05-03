@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container
+{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.box
+{
+    height: 50px;
+    width: 50px;
+    margin-left: 20px;
+    font-weight: bold;
+    font-size: larger;
+}
+
+#box1
+{
+    
+    border: 5px white solid;
+    border-top: red solid 5px;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+#box2
+{
+    display: flex;
+}
+
+#para
+{
+    align-self: center;
+}
+
+@keyframes spin 
+{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+} 
+
+@media (max-width:600px)
+{
+    .container{
+        flex-direction: column;
+    }
+}

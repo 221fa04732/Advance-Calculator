@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(237, 212, 212);
+        }
+
+        .main{
+            margin:3rem;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border:1px solid rgb(186, 0, 0);
+            border-radius: 10px;
+            padding-bottom: 1rem;
+        }
+
+        .heading{
+            width:100%;
+            display: flex;
+            justify-content: center;
+            background-color: rgb(186, 0, 0);
+            border: 2px solid rgb(186, 0, 0);
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            height:3rem;
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom:1rem;
+        }
+
+        .box1,.box2,.box3{
+            display:grid;
+            grid-template-columns: repeat(3,1fr);
+            justify-content: center;
+            align-items: center;
+            border:1px solid rgb(186, 0, 0);
+            
+        }
+
+        .container{
+            display:grid;
+            grid-template-columns: repeat(2,1fr);
+            justify-content: center;
+            align-items: center;
+            gap:30px;
+            margin-bottom:1rem;
+        }
+
+        .Add{
+            background-color: rgb(186, 0, 0);
+            width:90.4%;
+            display:flex;
+            justify-content:space-around;
+            align-items: center;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            height:2rem;
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+
+        .ans_heading
+        {
+            background-color: rgb(186, 0, 0);
+            width:44%;
+            display:flex;
+            justify-content:space-around;
+            align-items: center;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            height:2rem;
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+
+        #m1,#m2,#m3,#m4,#m5,#m6,#m7,#m8,#m9,#m11,#m12,#m13,#m14,#m15,#m16,#m17,#m18,#m19,#m21,#m22,#m23,#m24,#m25,#m26,#m27,#m28,#m29{
+            border:1px solid rgb(186, 0, 0);
+            height:3.5rem;
+            text-align: center;
+        }
+        
+        #Evaluate{
+            height:2rem;
+            background-color:rgb(232, 232, 132);
+            margin-top: 1rem;
+            width: 15rem;
+            height: 2.5rem;
+            font-size: 1.3rem;
+            font-weight: bold;
+            border-radius: 10px;
+        }
+
+        #Evaluate:hover
+        {
+            background-color:yellow ;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main">
+    <div class="heading">
+        <p>ADDITION OF MATRICES</p>
+    </div>
+    <div class="Add">
+            <div class="matrix1">
+                <p>Enter Matrix_1</p>
+            </div>
+            <div class="matrix2">
+                <p>Enter Matrix_2</p>
+            </div>
+    </div>
+    <div class="container">
+    <!-- <p>1st matrix</p> -->
+        
+        <div class="box1">
+            <input type="text" for="1" id="m1">
+            <input type="text" for="2" id="m2">
+            <input type="text" for="3" id="m3">
+            <input type="text" for="4" id="m4">
+            <input type="text" for="5" id="m5">
+            <input type="text" for="6" id="m6">
+            <input type="text" for="7" id="m7">
+            <input type="text" for="8" id="m8">
+            <input type="text" for="9" id="m9">
+        </div>
+
+        <div class="box2">
+            <input type="text" for="1" id="m11">
+            <input type="text" for="2" id="m12">
+            <input type="text" for="3" id="m13">
+            <input type="text" for="4" id="m14">
+            <input type="text" for="5" id="m15">
+            <input type="text" for="6" id="m16">
+            <input type="text" for="7" id="m17">
+            <input type="text" for="8" id="m18">
+            <input type="text" for="9" id="m19">
+        </div>
+    </div>
+    <div class="ans_heading">
+        <p>Result</p>
+    </div>
+    <div class="ans">
+        <div class="box3">
+            <input type="text" for="1" id="m21" readonly>
+            <input type="text" for="2" id="m22" readonly>
+            <input type="text" for="3" id="m23" readonly>
+            <input type="text" for="4" id="m24" readonly>
+            <input type="text" for="5" id="m25" readonly>
+            <input type="text" for="6" id="m26" readonly>
+            <input type="text" for="7" id="m27" readonly>
+            <input type="text" for="8" id="m28" readonly>
+            <input type="text" for="9" id="m29" readonly>
+        </div>
+    </div>
+    <div class="evaluate">
+        <button id="Evaluate" onclick="Evaluate()">EVALUATE</button>
+    </div>
+</div>
+
+</body>
+
+    <script>
+
+        function Evaluate(){
+            var a=parseInt(document.getElementById('m1').value);
+            var b=parseInt(document.getElementById('m2').value);
+            var c=parseInt(document.getElementById('m3').value);
+            var d=parseInt(document.getElementById('m4').value);
+            var e=parseInt(document.getElementById('m5').value);
+            var f=parseInt(document.getElementById('m6').value);
+            var g=parseInt(document.getElementById('m7').value);
+            var h=parseInt(document.getElementById('m8').value);
+            var i=parseInt(document.getElementById('m9').value);
+
+            var j=parseInt(document.getElementById('m11').value);
+            var k=parseInt(document.getElementById('m12').value);
+            var l=parseInt(document.getElementById('m13').value);
+            var m=parseInt(document.getElementById('m14').value);
+            var n=parseInt(document.getElementById('m15').value);
+            var o=parseInt(document.getElementById('m16').value);
+            var p=parseInt(document.getElementById('m17').value);
+            var q=parseInt(document.getElementById('m18').value);
+            var r=parseInt(document.getElementById('m19').value);
+
+            document.getElementById('m21').value=a+j;
+            document.getElementById('m22').value=b+k;
+            document.getElementById('m23').value=c+l;
+            document.getElementById('m24').value=d+m;
+            document.getElementById('m25').value=e+n;
+            document.getElementById('m26').value=f+o;
+            document.getElementById('m27').value=g+p;
+            document.getElementById('m28').value=h+q;
+            document.getElementById('m29').value=i+r;
+            
+        }
+
+    </script>
+
+</html>
